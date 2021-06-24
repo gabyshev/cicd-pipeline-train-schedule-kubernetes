@@ -45,7 +45,7 @@ pipeline {
             steps {
                 input 'Deploy to Production?'
                 milestone(1)
-                kubernetedDeploy(
+                kubernetesDeploy(
                     enableConfigSubstitution: true,
                     kubeconfigId: 'kubeconfig',
                     configs: 'k8sapp.yml'
